@@ -12,11 +12,15 @@
               rel="stylesheet"
               />
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <body>
         <main>
-
             <section class="glass">
                 <div class="dashboard">
                     <div class="user">
@@ -67,7 +71,7 @@
                     </div>
                 </div>
                 <div class="right_side">
-                    <div class="navbar">
+                    <div class="navbar" id="myTopnav">
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li>
@@ -80,7 +84,10 @@
 
                                 </div>
                             </li>
-                            <li style="float:right"><a class="active" href="#about">About </a></li>
+                            <li><a class="active" href="#about">About </a></li>
+                            <li><a href="javascript:void(0);" class="icon1" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                                </a></li>
                         </ul>
                     </div>
                     <div class="status">
@@ -124,6 +131,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+
+        </script>
 
     </body>
 </html>
